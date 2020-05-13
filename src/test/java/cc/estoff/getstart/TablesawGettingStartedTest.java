@@ -17,6 +17,7 @@ public class TablesawGettingStartedTest {
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
     private final PrintStream originalErr = System.err;
+    TablesawGettingStarted testClass = new TablesawGettingStarted();
 
     @Before
     public void setUpStreams() {
@@ -35,7 +36,7 @@ public class TablesawGettingStartedTest {
      */
     @Test
     public void testTablesawGettingStartedMain() {
-        TablesawGettingStarted.columns();
+        testClass.columns();
         String ncString = "Column: nc\n1\n2\n3\n4\n5\n\n";
         Assert.assertEquals(ncString, outContent.toString());
     }

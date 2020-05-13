@@ -7,9 +7,10 @@ import tech.tablesaw.api.DoubleColumn;
  *
  */
 public class TablesawGettingStarted {
-    public static void columns() {
-        double[] numbers = {1, 2, 3, 4, 5};
-        DoubleColumn nc = DoubleColumn.create("nc", numbers);
-        System.out.println(nc.print());
+    double[] numbers = {1, 2, 3, 4, 5};
+    DoubleColumn nc = DoubleColumn.create("nc", numbers);
+
+    public void columns() {
+        System.out.println(this.nc.print());
     }
 }
