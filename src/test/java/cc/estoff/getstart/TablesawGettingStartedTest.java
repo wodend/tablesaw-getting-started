@@ -83,4 +83,15 @@ public class TablesawGettingStartedTest {
         String ncString = "Column: nc\n2\n3\n\n";
         Assert.assertEquals(ncString, outContent.toString());
     }
+
+    /**
+     * selectionOtherCol() should print a named column with the numbers
+     * corresponding to indicies from filtering another column.
+     */
+    @Test
+    public void testSelectionOtherCol() {
+        testClass.selectionOtherCol();
+        String ncString = "Column: nc\n1\n4\n\n";
+        Assert.assertEquals(ncString, outContent.toString());
+    }
 }

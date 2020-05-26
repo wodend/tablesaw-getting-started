@@ -1,6 +1,7 @@
 package cc.estoff.getstart;
 
 import tech.tablesaw.api.DoubleColumn;
+import tech.tablesaw.api.StringColumn;
 import tech.tablesaw.selection.Selection;
 
 /**
@@ -34,5 +35,12 @@ public class TablesawGettingStarted {
     public void selectionIndexRange() {
         DoubleColumn withRowRange = nc.where(Selection.withRange(1, 3));
         System.out.println(withRowRange.print());
+    }
+
+    public void selectionOtherCol() {
+        String[] stringArray = new String[] {"foo", "bar", "baz", "foobar"};
+        StringColumn sc = StringColumn.create("sc", stringArray);
+        DoubleColumn result = nc.where(sc.startsWith("foo"));
+        System.out.println(result.print());
     }
 }
