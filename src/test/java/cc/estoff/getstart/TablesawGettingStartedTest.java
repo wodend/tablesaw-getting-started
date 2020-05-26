@@ -35,9 +35,30 @@ public class TablesawGettingStartedTest {
      * columns() should print a named column with some numbers.
      */
     @Test
-    public void testTablesawGettingStartedMain() {
+    public void testColumns() {
         testClass.columns();
         String ncString = "Column: nc\n1\n2\n3\n4\n5\n\n";
+        Assert.assertEquals(ncString, outContent.toString());
+    }
+
+    /**
+     * arrayOperations() should print a named column with some numbers.
+     */
+    @Test
+    public void testArrayOperations() {
+        testClass.arrayOperations();
+        String ncString = "Column: nc * 4.0\n4\n8\n12\n16\n20\n\n";
+        Assert.assertEquals(ncString, outContent.toString());
+    }
+
+    /**
+     * selectionFilter() should print a named column with some numbers less
+     * than 3, and which are all positive.
+     */
+    @Test
+    public void testSelectionFilter() {
+        testClass.selectionFilter();
+        String ncString = "Column: nc\n1\n2\n\n";
         Assert.assertEquals(ncString, outContent.toString());
     }
 }
