@@ -1,6 +1,7 @@
 package cc.estoff.getstart;
 
 import tech.tablesaw.api.DoubleColumn;
+import tech.tablesaw.selection.Selection;
 
 /**
  * Tablesaw Getting Started
@@ -23,5 +24,15 @@ public class TablesawGettingStarted {
         DoubleColumn filteredPositive = nc.where(nc.isLessThan(3)
                                                    .and(nc.isPositive()));
         System.out.println(filteredPositive.print());
+    }
+
+    public void selectionIndexRows() {
+        DoubleColumn withRows = nc.where(Selection.with(0, 2));
+        System.out.println(withRows.print());
+    }
+
+    public void selectionIndexRange() {
+        DoubleColumn withRowRange = nc.where(Selection.withRange(1, 3));
+        System.out.println(withRowRange.print());
     }
 }

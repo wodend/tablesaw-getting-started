@@ -61,4 +61,26 @@ public class TablesawGettingStartedTest {
         String ncString = "Column: nc\n1\n2\n\n";
         Assert.assertEquals(ncString, outContent.toString());
     }
+
+    /**
+     * selectionIndexRows() should print a named column with the numbers from
+     * nc in rows 0 and 2.
+     */
+    @Test
+    public void testSelectionIndexRows() {
+        testClass.selectionIndexRows();
+        String ncString = "Column: nc\n1\n3\n\n";
+        Assert.assertEquals(ncString, outContent.toString());
+    }
+
+    /**
+     * selectionIndexRange() should print a named column with the numbers from
+     * nc in rows 1 through 3.
+     */
+    @Test
+    public void testSelectionIndexRange() {
+        testClass.selectionIndexRange();
+        String ncString = "Column: nc\n2\n3\n\n";
+        Assert.assertEquals(ncString, outContent.toString());
+    }
 }
