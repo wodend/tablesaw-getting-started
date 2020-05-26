@@ -27,7 +27,6 @@ Compile the project and run the tests with Maven.
 
 ```bash
 cd tablesaw-getting-started
-mvn run
 mvn test
 ```
 
